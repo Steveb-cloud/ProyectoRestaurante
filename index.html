@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Parrilla Real</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh; 
+            width: 250px; 
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding-top: 20px;
+            z-index: 1000; 
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            margin: 15px 0;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .sidebar a.active,
+        .sidebar a:hover {
+            background-color: #ff6347;
+            color: #fff;
+        }
+        /* Main content ajustado para que no se superponga al sidebar */
+        .main-content {
+            margin-left: 250px; /* Deja espacio para el sidebar */
+            padding-top: 20px;
+        }
+        .hero {
+            position: relative;
+            text-align: right;
+            color: white;
+            height: 100vh;
+        }
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            text-align: right;
+            max-width: 400px;
+        }
+        .hero-text h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .btn-order {
+            background-color: #ff6347;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .btn-order:hover {
+            background-color: #e5533f;
+        }
+        .about-section {
+            background-color: #f8f8f8;
+            padding: 50px 0;
+        }
+
+        .about-section .text-about h2 {
+            color: #b22a2a; 
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-section .text-about p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .about-section .image-about img {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-3 sidebar d-flex flex-column align-items-center py-4">
+                <div class="mb-4">
+                    <img src="image.png" alt="Logo" class="img-fluid" style="max-width: 150px;">
+                </div>
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#more">More</a>
+                <div class="mt-auto d-flex gap-3">
+                    <a href="#"><i class="bi bi-envelope-fill" style="font-size: 40px;"></i></a> <!-- Ícono de correo -->
+                    <a href="#"><i class="bi bi-telephone-fill" style="font-size: 40px;"></i></a> <!-- Ícono de teléfono -->
+                    <a href="#"><i class="bi bi-geo-alt-fill" style="font-size: 40px;"></i></a> <!-- Ícono de ubicación -->
+                </div>
+            </div>
+            
+            <div class="col-md-9 p-0 main-content" id="home">
+                <div class="hero">
+                    <img src="6565d9491a89f4b7b7915b3e_tipos de restaurante.jpg" alt="Deliciosa Hamburguesa">
+                    <div class="hero-text">
+                        <h1>Disfruta de la excelencia de La Parrilla Real</h1>
+                        <p>Ingredientes de calidad, sabor excepcional: ¡pruébanos hoy mismo!</p>
+                        <a href="#" class="btn-order">¡Haz tu pedido ahora!</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-9 p-0 main-content" id="about">
+                <div class="about-section d-flex align-items-center py-5">
+                    <div class="text-about col-md-6">
+                        <h2>Sobre La Parrilla Real</h2>
+                        <p>La Parrilla Real es un restaurante familiar, donde la tradición y el sabor se unen para brindarte una experiencia única. Con nuestros ingredientes frescos y recetas artesanales, garantizamos la mejor calidad en cada plato. Disfruta de carnes a la parrilla, pastas caseras, y mucho más en un ambiente cálido y acogedor. Ven a visitarnos y deja que el sabor hable por sí mismo.</p>
+                    </div>
+                    <div class="image-about col-md-6">
+                        <img src="imagesc.jpg" alt="La Parrilla Real" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
